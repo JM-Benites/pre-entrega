@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- CSS de Bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Trispace:wght@300;400;600&display=swap");
+
+            :root {
+                --bs-body-font-family: "Trispace", sans-serif;
+                --bs-body-color: #eef;
+                --bs-body-bg: #10121c;
+            }
+        </style>
+        <title>Marvel (MCU)</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="row pt-5">
+                    <div class="col-sm-10 col-md-8 col-lg-6 mx-auto">
+                        <h1 class="display-4 text-center py-2">Universo Cinematrográfico de Marvel</h1>
+                        <p class="lead">
+                            El Universo cinematográfico de Marvel (MCU; en inglés, Marvel Cinematic Universe) es una franquicia de medios y un universo compartido, centrada en una serie de películas de superhéroes producidas
+                            independientemente por Marvel Studios. Las películas están basadas en personajes que aparecen en los cómics estadounidenses publicados por Marvel Comics. El universo compartido, al igual que el Universo Marvel
+                            original en los cómics, se estableció mediante cruce de elementos, escenarios, elenco y personajes comunes de la trama. La saga es pionera en unir a varios superhéroes y varios equipos de ellos en un solo
+                            universo, algo no visto antes en el cine de superhéroes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="container">
+            <div class="accordion mx-md-5 my-5 rounded-0" id="accordionExample">
+                <!--Edades de pasajeros-->
+                <div class="accordion-item rounded-0">
+                    <h2 class="accordion-header bg-dark" id="headingOne">
+                        <button class="accordion-button rounded-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Fases del MCU (Marvel Cinematic Universe)</button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-black-50">
+                            <p>
+                                Hasta la actualidad el Marvel Cinematic Universe (UCM;en español, Universo cinematográfico de Marvel) se divide en cuatro Fases, donde cada película se encuentra en una de estas. Con el gráfico podemos
+                                visibilizar de mejor manera la cantidad de peliculas que son parte de cada fase y la diferencia entre la cantidad que abarca cada una de las fases
+                            </p>
+
+                            <p>
+                                <strong>Primera Fase</strong> <br />
+                                son parte de esta:
+                            </p>
+                            <ul>
+                                <li>Iron Man</li>
+                                <li>The incredible Hulk</li>
+                                <li>Iron Man 2</li>
+                                <li>Thor</li>
+                                <li>Captain America: The First Avenger</li>
+                                <li>The Avengers</li>
+                            </ul>
+
+                            <p>
+                                <strong>Segunda Fase</strong> <br />
+                                son parte de esta:
+                            </p>
+                            <ul>
+                                <li>Iron Man 3</li>
+                                <li>Thor: The Dark World</li>
+                                <li>Captain America: The Winter Soldier</li>
+                                <li>Guardians of the Galaxy</li>
+                                <li>Avengers: Age of Ultron</li>
+                                <li>Ant-Man</li>
+                            </ul>
+
+                            <p>
+                                <strong>Tercera Fase</strong> <br />
+                                son parte de esta:
+                            </p>
+                            <ul>
+                                <li>Captain America: Civil War</li>
+                                <li>Doctor Strange</li>
+                                <li>Guardians of the Galaxy Vol.2</li>
+                                <li>Spider-Man: Homecoming</li>
+                                <li>Thor:Ragnarok</li>
+                                <li>Black Panther</li>
+                                <li>Avengers: Infinity War</li>
+                                <li>Ant-Man and the Wasp</li>
+                                <li>Captain Marvel</li>
+                                <li>Avengers: Endgame</li>
+                                <li>Spider-Man:Far From Home</li>
+                            </ul>
+
+                            <p>
+                                <strong>Cuarta Fase</strong> <br />
+                                son parte de esta:
+                            </p>
+                            <ul>
+                                <li>Black Widow</li>
+                                <li>Shang-Chi and the Legend of the Ten Rings</li>
+                                <li>Eternals</li>
+                                <li>Spider-Man: No Way Home</li>
+                            </ul>
+
+                            <div class="col-md-6 mx-auto mb-3">
+                                <canvas id="primerChart" width="100" height="100"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Pasajeras y pasajeros-->
+                <div class="accordion-item rounded-0">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Ingresos y Presupuestos</button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-black-50">
+                            <p>En este gráfico podemos observar la diferencia entre el <strong>presupuesto</strong> que se uso para realizar cada película y el <strong>ingreso</strong> que se obtuvo tras el estreno es estas.</p>
+                            <div class="col-md-6 mx-auto mb-3">
+                                <canvas id="segundoChart" width="100" height="100"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Clases-->
+                <div class="accordion-item rounded-0">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Fases, Ingresos y Presupuestos</button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-black-50">
+                            <p>En relación al contexto anterior, aquí podemos observar al mismo tiempo la fase a la que pertenece la película y la comparación entre lo que se gasto y se gano con la realización de cada película.</p>
+
+                            <div class="col-md-6 mx-auto mb-3">
+                                <canvas id="tercerChart" width="1500" height="1500"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Sobrevivientes por clases-->
+                <div class="accordion-item rounded-0">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">😔Cuarto Gráfico😔</button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-black-50">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                deserunt mollit anim id est laborum.
+                            </p>
+
+                            <canvas id="cuartoChart" width="100" height="30"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Extra-->
+                <div class="accordion-item rounded-0">
+                    <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseFive">😭Quinto Gráfico😭</button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-black-50">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            </p>
+
+                            <canvas id="quintoChart" width="100" height="50"></canvas>
+
+                            <canvas id="sextoChart" width="100" height="50"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Fin-->
+            </div>
+            <div class="row">
+                <div class="col-sm-10 col-md-8 col-lg-6 mx-auto">
+                    <p></p>
+                </div>
+            </div>
+        </main>
+
+        <aside>
+            <div class="container">
+                <div class="row py-5">
+                    <div class="col-sm-10 col-md-8 col-lg-6 mx-auto small text-center">
+                        <p>Fuentes: <a href="https://es.wikipedia.org/wiki/Universo_cinematogr%C3%A1fico_de_Marvel">Wikipedia</a></p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col"><p class="text-muted mt-5 text-center small">Bootstrap v5.1 y Charts.js</p></div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Biblioteca de Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <!-- Biblioteca Chart.js -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"
+            integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <!-- Un gran script, que contiene una función asincrónica para ir a buscar un JSON con -->
+        <script>
+            async function todo() {
+                //el fetch
+                const consulta = await fetch("https://raw.githubusercontent.com/JM-Benites/datasets/main/datos.json");
+                const data = await consulta.json();
+
+                console.log(data);
+
+                var faseUno = 0;
+                var faseDos = 0;
+                var faseTres = 0;
+                var faseCuatro = 0;
+
+                var fUnoNombre = [];
+                var fDosNombre = [];
+                var fTresNombre = [];
+                var fCuatroNombre = [];
+
+                //consultando en cada elemento del arreglo
+                data.forEach((d) => {
+                    if (d.fase == "1") {
+                        faseUno = faseUno + 1;
+                        fUnoNombre.push(d.pelicula);
+                    } else if (d.fase == "2") {
+                        faseDos = faseDos + 1;
+                        fDosNombre.push(d.pelicula);
+                    } else if (d.fase == "3") {
+                        faseTres = faseTres + 1;
+                        fTresNombre.push(d.pelicula);
+                    } else if (d.fase == "4") {
+                        faseCuatro = faseCuatro + 1;
+                        fCuatroNombre.push(d.pelicula);
+                    }
+                });
+
+                console.log(fUnoNombre, fDosNombre, fTresNombre, fCuatroNombre);
+
+                //Fases y cantidad de peliculas
+                new Chart(document.getElementById("primerChart").getContext("2d"), {
+                    type: "pie",
+                    data: {
+                        labels: ["Fase uno", "Fase dos", "Fase tres", "Fase cuatro"],
+                        datasets: [{ data: [faseUno, faseDos, faseTres, faseCuatro], label: "cantidad de peliculas", backgroundColor: ["#F06EC4", "#AB72F7", "#7396E0", "#495F8F"] }],
+                    },
+                    options: {
+                        animation: false,
+                        layout: {
+                            padding: 10,
+                        },
+                    },
+                });
+                //recepcion del publico
+                // No todo se resuelve con pie, doughthout o barras, a veces se necesitan otros gráficos
+
+                async function otro() {
+                    //el fetch
+                    const consulta = await fetch("https://raw.githubusercontent.com/JM-Benites/datasets/main/datos.json");
+                    const data = await consulta.json();
+                    var puntos = [];
+                    var globosPrimera = [];
+                    var globosSegunda = [];
+                    var globosTercera = [];
+                    var globosCuarta = [];
+
+                    data.forEach((d) => {
+                        let info = { x: d.presupuesto, y: d.ingreso_mundial, pelicula: d.pelicula };
+                        let otra = { x: d.presupuesto, y: d.ingreso_mundial, pelicula: d.pelicula };
+
+                        if (d.fase == 1) {
+                            globosPrimera.push(otra);
+                        } else if (d.fase == 2) {
+                            globosSegunda.push(otra);
+                        } else if (d.fase == 3) {
+                            globosTercera.push(otra);
+                        } else {
+                            globosCuarta.push(otra);
+                        }
+                        puntos.push(info);
+                    });
+
+                    console.log(puntos);
+                    //Gráfico de dispersión
+                    //Para evidenciar si existe una relación o correlación entre las dos variables
+                    new Chart(document.getElementById("segundoChart").getContext("2d"), {
+                        type: "scatter",
+                        data: {
+                            datasets: [
+                                {
+                                    label: "Presupuesto contra ingreso",
+                                    data: puntos,
+                                    backgroundColor: "rgba(0,100,255,.5)",
+                                    pointRadius: 10,
+                                    pointHoverRadius: 12,
+                                },
+                            ],
+                        },
+                        options: {
+                            animation: false,
+                            scales: {
+                                x: {
+                                    min: 0,
+                                    ticks: {
+                                        callback: function (numero) {
+                                            return "US$ " + numero.toLocaleString("es-CL");
+                                        },
+                                    },
+                                },
+                                y: {
+                                    min: 0,
+                                    ticks: {
+                                        callback: function (numero) {
+                                            return "US$ " + numero.toLocaleString("es-CL");
+                                        },
+                                    },
+                                },
+                            },
+                            plugins: {
+                                tooltip: {
+                                    callbacks: {
+                                        label: (context) => {
+                                            console.log(context);
+                                            return "«" + context.raw.pelicula + "» tuvo ingresos mundiales por US$" + context.raw.y.toLocaleString("es-CL");
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    });
+                    //Gráfico de burbujas
+                    //Para analizar patrones o correlaciones de dos valores, considerando un tercer valor que se presenta en su radio
+
+                    new Chart(document.getElementById("tercerChart").getContext("2d"), {
+                        type: "scatter",
+                        data: {
+                            datasets: [
+                                {
+                                    label: "Fase 1",
+                                    data: globosPrimera,
+                                    backgroundColor: "rgba(245,191,83,.75)",
+                                    pointRadius: 10,
+                                    pointHoverRadius: 12,
+                                },
+                                {
+                                    label: "Fase 2",
+                                    data: globosSegunda,
+                                    backgroundColor: "rgba(230,105,101,.75)",
+                                    pointRadius: 10,
+                                    pointHoverRadius: 12,
+                                },
+                                {
+                                    label: "Fase 3",
+                                    data: globosTercera,
+                                    backgroundColor: "rgba(249,98,252,.75)",
+                                    pointRadius: 10,
+                                    pointHoverRadius: 12,
+                                },
+                                {
+                                    label: "Fase 4",
+                                    data: globosCuarta,
+                                    backgroundColor: "rgba(148,95,245,.75)",
+                                    pointRadius: 10,
+                                    pointHoverRadius: 12,
+                                },
+                            ],
+                        },
+                        options: {
+                            animation: false,
+                            scales: {
+                                x: {
+                                    ticks: {
+                                        callback: function (numero) {
+                                            return "US$ " + numero.toLocaleString("es-CL");
+                                        },
+                                    },
+                                },
+                            },
+                            plugins: {
+                                tooltip: {
+                                    callbacks: {
+                                        label: (context) => {
+                                            console.log(context);
+                                            return "«" + context.raw.pelicula + "» tuvo ingresos mundiales por US$" + context.raw.y.toLocaleString("es-CL");
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    });
+                }
+                otro().catch((error) => console.error(error));
+                //sobrevivientes y muertes por clase
+                new Chart(document.getElementById("cuartoChart").getContext("2d"), {
+                    type: "bar",
+                    data: {
+                        labels: ["Primera clase", "Segunda Clase", "Tercera Clase"],
+                        datasets: [
+                            { data: [vivosPrimera, vivosSegunda, vivosTercera], label: "Sobreviven", backgroundColor: ["#8CB1E5"] },
+                            { data: [muertosPrimera, muertosSegunda, muertosTercera], label: "Mueren", backgroundColor: ["#334"] },
+                        ],
+                    },
+                    options: {
+                        indexAxis: "y",
+                        animation: false,
+                        layout: {
+                            padding: 10,
+                        },
+                    },
+                });
+
+                //sobrevivientes y muertes por edad y sexo (mujeres y niños primero)
+                new Chart(document.getElementById("quintoChart").getContext("2d"), {
+                    type: "bar",
+                    data: {
+                        labels: ["Mujeres", "Niños", "Hombres"],
+                        datasets: [
+                            { data: [mujeresSalvadas, ninesSalvades, hombresSalvados], label: "Sobreviven", backgroundColor: ["#8CB1E5"] },
+                            { data: [mujeresMuertas, ninesMuertes, hombresMuertos], label: "Mueren", backgroundColor: ["#334"] },
+                        ],
+                    },
+                    options: {
+                        indexAxis: "y",
+                        animation: false,
+                        layout: {
+                            padding: 10,
+                        },
+                    },
+                });
+            }
+            todo().catch((error) => console.error(error));
+        </script>
+    </body>
+</html>
