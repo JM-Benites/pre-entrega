@@ -520,15 +520,15 @@
             }
             fases_series().catch((error) => console.error(error));
         </script>
-        <!--Quinto Gráfico, Valoración del Público Películas -->
-        <!--Quinto Gráfico, Valoración del Público Películas -->
+        <!--Quinto Gráfico, Puntuación del Público Películas -->
+        <!--Quinto Gráfico, Puntuación del Público Películas -->
         <script>
-            async function valoracion_peliculas() {
+            async function puntuacion_peliculas() {
                 const consulta = await fetch("https://raw.githubusercontent.com/JM-Benites/datasets/main/datos.json");
                 const data = await consulta.json();
 
                 var nombre = [];
-                var valoracion_publico = [];
+                var puntuacion_publico = [];
 
                 data.forEach((d) => {
                     nombre.push(d.pelicula);
@@ -541,8 +541,8 @@
                         labels: nombre,
                         datasets: [
                             {
-                                data: valoracion_publico,
-                                label: "Valoración público",
+                                data: puntuacion_publico,
+                                label: "Puntuación público",
                                 backgroundColor: "#226329",
                                 hoverBackgroundColor: ["#40CC4A"],
                             },
@@ -564,21 +564,21 @@
                     },
                 });
             }
-            valoracion_peliculas().catch((error) => console.error(error));
+            puntuacion_peliculas().catch((error) => console.error(error));
         </script>
         <!--Sexto Gráfico, Valoración del Público Series-->
         <!--Sexto Gráfico, Valoración del Público Series-->
         <script>
-            async function valoracion_series() {
+            async function puntuacion_series() {
                 const consulta = await fetch("https://raw.githubusercontent.com/JM-Benites/datasets/main/datos-series.json");
                 const data = await consulta.json();
 
                 var nombre = [];
-                var valoracion_publico = [];
+                var puntuacion_publico = [];
 
                 data.forEach((d) => {
                     nombre.push(d.serie);
-                    valoracion_publico.push(d.IMDb);
+                    puntuacion_publico.push(d.IMDb);
                 });
 
                 new Chart(document.getElementById("sextoChart").getContext("2d"), {
@@ -587,8 +587,8 @@
                         labels: nombre,
                         datasets: [
                             {
-                                data: valoracion_publico,
-                                label: "Valoración público",
+                                data: puntuacion_publico,
+                                label: "Puntuación público",
                                 backgroundColor: "#2139A1",
                                 hoverBackgroundColor: ["#0B66EB"],
                             },
@@ -610,7 +610,7 @@
                     },
                 });
             }
-            valoracion_series().catch((error) => console.error(error));
+            puntuacion_series().catch((error) => console.error(error));
         </script>
         <!--Septimo Gráfico, Ganancia Neta-->
         <!--Septimo Gráfico, Ganancia Neta-->
